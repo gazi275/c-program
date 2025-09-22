@@ -13,11 +13,11 @@ int main()
     scanf("%d",&x);
     int pos;
     scanf("%d",&pos);
-    for(int i=n-1;i>=pos;i--)
+    for(int i=n;i>=pos;i--)
     {
-        A[i+1]=A[i];
+        A[i]=A[i-1];
     }
-    A[pos]=x;
+    A[pos-1]=x;
     for(int i=0;i<n+1;i++)
     {
       printf("%d ",A[i]);
