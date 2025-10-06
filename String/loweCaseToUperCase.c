@@ -3,16 +3,41 @@
 #include <string.h>
 int main()
 {
-    char A[100];
-    scanf("%s", A);
-    int len = strlen(A);
-    for (int i = 0; i < len; i++)
+    char a[26];
+    scanf("%s", a);
+    char b[26];
+    scanf("%s", b);
+    for (int i = 0; a[i] != '\0' && b[i] != '\0'; i++)
     {
-        if (A[i] >= 'a' && A[i] <= 'z')
+        if (a[i] > b[i])
         {
-            A[i] = A[i] - 32;
+            printf("1");
+            break;
+        }
+        else if (a[i] < b[i])
+        {
+            printf("-1");
+            break;
+        }
+        else if (a[i] == b[i])
+        {
+            if (a[i] == '\0' && b[i] != '\0')
+            {
+                printf("-1");
+                break;
+            }
+            else if (b[i] == '\0' && a[i] != '\0')
+            {
+                printf("1");
+                break;
+            }
+            else
+            {
+                printf("0");
+                
+            }
         }
     }
-    printf("%s", A);
+
     return 0;
 }
