@@ -8,7 +8,8 @@ int main()
     char B[1001];
     scanf("%s", B);
     int flag = 0;
-    for (int i = 0; A[i] != '\0' || B[i] != '\0'; i++)
+    int i;
+    for ( i = 0; A[i] != '\0' || B[i] != '\0'; i++)
     {
         if (A[i] != B[i])
         {
@@ -18,10 +19,15 @@ int main()
     }
     if (flag == 1)
     {
-        printf("NO");
+        if(A[i]>B[i]){
+            printf("%s",B);
+        }
+        else if(A[i]<B[i]){
+            printf("%s",A);
+        }
     }
     else
     {
-        printf("YES");
+        printf("%s",A);
     }
 }
