@@ -18,10 +18,10 @@ int main(){
          }
 
          if(isPrime){
-             printf("%d is a prime number.\n", n);
-         } else {
-             printf("%d is not a prime number.\n", n);
-         }
+            printf("%d is a prime number", n);
+            } else {
+            printf("%d is not a prime number", n);
+            }
         
     }
 
